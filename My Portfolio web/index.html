@@ -98,7 +98,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/profile-pic.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Android Developer &amp; Web Developer.</h3>
@@ -237,7 +237,7 @@
 
 
 
-    <!-- ======= Portfolio Section ======= -->
+    <!-- ======= Project Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
@@ -249,8 +249,19 @@
             growth but also contribute to the collective advancement of the team and its goals.</p>
         </div>
 
-
+        <div class="cssss"></div>
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/recipeapp.png" class="img-fluid1" alt="">
+              <div class="portfolio-links">
+                <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a> -->
+                <a href="RecipeEase.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
@@ -311,7 +322,7 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section><!-- End Project Section -->
 
 
     <!-- ======= Contact Section ======= -->
@@ -334,7 +345,7 @@
                 <p>Karmanveer Susuwahi Varanasi,221011</p>
               </div>
 
-              <div class="email">
+              <div class="email" id="emailDiv">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>rudresh.patel0707@gmail.com</p>
@@ -351,35 +362,31 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form
-              action="https://docs.google.com/forms/d/e/1FAIpQLSfACRV56hDJX5KE3zy4qHDUe2scSN2rxkrCqSZzzYBDY4jYXw/formResponse"enctype="text/plain" target="hidden_iframe"
-              method="post" role="form" class="php-email-form">
+            <form action="https://api.web3forms.com/submit" method="POST"
+              class="php-email-form">
               <div class="row">
+                <input type="hidden" name="access_key" value="122b2a07-e2a8-4ac0-99b9-f3cc4e9fcbab">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="entry.2005620554" class="form-control" id="name" required>
+                  <input type="text"name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="entry.1045781291" id="email" required>
+                  <input type="email" name="email" class="form-control" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="entry.1166974658" id="subject" required>
-              </div>
-              <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="entry.839337160" rows="10" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button class="btn" type="submit">Send Message</button></div>
             </form>
-            <iframe id="hidden_iframe" name="hidden_iframe" style="display: none;"></iframe>
+           
           </div>
 
 
@@ -395,6 +402,7 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -405,26 +413,23 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function() {
+      // Reset all form fields
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    });
+  </script>
+
+ 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
   <script src="assets/js/android.js"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('downloadResume').addEventListener('click', function () {
-        // Replace '1_3XBqm-d_7IEcG1r5trExdtLNqpiUIQh' with your actual FILE_ID
-        var fileID = '1_3XBqm-d_7IEcG1r5trExdtLNqpiUIQh';
-
-        // Construct the download link
-        var downloadLink = 'https://drive.google.com/uc?id=' + fileID;
-
-        // Open the link in a new tab
-        window.open(downloadLink, '_blank');
-      });
-    });
-  </script>
-
+  
 </body>
 
 </html>

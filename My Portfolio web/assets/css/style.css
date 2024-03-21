@@ -55,6 +55,14 @@ h6 {
   visibility: visible;
   opacity: 1;
 }
+.btn{
+  /* transform: scale(2); */
+}
+.btn:hover{
+  /* transform: ; */
+  /* background: #b8dff1; */
+  transform: skew(0deg, 5deg) scale(1.16) ;
+}
 
 /*--------------------------------------------------------------
 # Header
@@ -161,6 +169,12 @@ h6 {
   position: relative;
   white-space: nowrap;
 }
+.nav-menu>ul>li:hover{
+  position: relative;
+  white-space: nowrap;
+  transform: scale(1.1);
+  transform: translateY(-7px);
+}
 
 .nav-menu a,
 .nav-menu a:focus {
@@ -231,9 +245,10 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: #0A182E;
+  background:#071f3b;
   background-size: cover;
 }
+
 
 /* #hero:before {
   content: "";
@@ -246,8 +261,34 @@ h6 {
   z-index: 1;
 } */
 
-#hero .hero-container1,
+
+
+
+
 #hero .hero-container2 {
+  position: absolute;
+  
+  /* top: 50px; */
+  
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    /* box-shadow: */
+      /* inset 0 0 50px #1adb44, */
+       /* inset 20px 0 80px rgb(4, 106, 50), */
+      /* inset -20px 0 80px #0ff, */
+      /* inset 20px 0 300px rgb(18, 221, 48), */
+      /* inset -20px 0 300px rgb(13, 182, 49),  */
+      /* 0 0 50px #0ce81080, */
+      /* -10px 0 80px rgb(55, 255, 0), */
+      /* 10px 0 80px rgb(7, 239, 57); */
+  
+}
+#hero .hero-container1 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -259,18 +300,22 @@ h6 {
 }
 
 #hero .hero-container1 {
+  
   left: 140px;
+  
 }
+
+
 
 #hero .hero-container2 {
   right: 0;
 }
 
-#hero .hero-container {
+/* #hero .hero-container {
   position: relative;
   z-index: 2;
   min-width: 300px;
-}
+} */
 
 #hero h1 {
   margin: 0 0 10px 0;
@@ -295,6 +340,8 @@ h6 {
 
 #getintouch:hover {
   box-shadow: 0px 0px 20px 0px#64ffda;
+  transform: scale(1.1);
+  transform: translateY(-5px);
 }
 #intro {
   color: #64ffda;
@@ -305,6 +352,7 @@ h6 {
   color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
+  letter-spacing: 1px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -340,11 +388,11 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
-  background: #0A182E;
+  background: #071f3b;
 }
 
 .section-bg {
-  background: #0A182E;
+  background: #071f3b;
 }
 
 .section-title {
@@ -388,6 +436,8 @@ p{
   margin-top: 0;
   margin-bottom: 1rem;
   color: #6884A6;
+  line-height: 28px;
+  letter-spacing: 1px;
 }
 
 .about .content ul {
@@ -410,7 +460,8 @@ p{
   font-size: 16px;
   margin-right: 5px;
   color: #149ddd;
-  line-height: 0;
+  line-height: 1.2;
+  letter-spacing: 18px;
 }
 
 .about .content p:last-child {
@@ -421,6 +472,9 @@ p{
   max-width: 100%;
   height: auto;
   border-radius: 50%;
+  
+  margin: auto 0;
+
 }
 
 
@@ -430,7 +484,7 @@ p{
 #experience {
   padding: 60px 0;
   overflow: hidden;
-  background: #0A182E;
+  background: #071f3b;
 }
 
 
@@ -459,6 +513,7 @@ p{
 #experience .skillImageContainer {
   background-color: #CDD6F7;
   border-radius: 100%;
+ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -489,6 +544,7 @@ p{
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+
 }
 
 .portfolio #portfolio-flters {
@@ -532,6 +588,7 @@ p{
   position: relative;
   overflow: hidden;
   z-index: 1;
+  backdrop-filter: blur(10px);
 }
 
 .portfolio .portfolio-wrap::before {
@@ -546,7 +603,11 @@ p{
   z-index: 2;
   opacity: 0;
 }
-
+.cssss{
+  
+    
+  
+}
 .portfolio .portfolio-wrap .portfolio-links {
   opacity: 1;
   left: 0;
@@ -816,13 +877,16 @@ p{
 .contact .php-email-form label {
   padding-bottom: 8px;
   color: #CDD6F7;
+  
 }
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 0;
+  border-radius: 5;
   box-shadow: none;
   font-size: 14px;
+  border-width: 3px;
+  border-color: #37b3ed;
 }
 
 .contact .php-email-form input {
